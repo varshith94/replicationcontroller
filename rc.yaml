@@ -1,0 +1,21 @@
+apiVession: v1
+kind: ReplicationController
+metadata:
+  name: Rsapppod
+  lables:
+    app: rsapp
+spec:
+  template:
+     metadata:
+       name: javawebapp
+       lables:
+         app: rsapp
+     spec:
+       containers:
+       - name: dockerhandson/java-webapp
+         image: dockerhandson/java-webapp
+         ports:
+         - containerPort: 8080
+
+
+  
